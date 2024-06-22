@@ -7,7 +7,7 @@ export default function Navbarr({submit, change, sidebardata}) {
     <Navbar className="bg-[#C2C4D2] fixed top-3 w-[96%] shadow-md z-50" fluid rounded>
       <Navbar.Brand>
         <img src={d} className="mr-3 h-6 sm:h-9 rounded" alt="MT Logo"  />
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">Movie Trailer</span>
+        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">{window.innerWidth <= 768 ? "MT" : "Movie Trailer"}</span>
       </Navbar.Brand>
 <div className='flex flex-row'>
 <form onSubmit={submit} className="flex flex-row space-x-2">

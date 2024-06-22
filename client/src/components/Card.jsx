@@ -4,10 +4,7 @@ export default function Cardd({ name, date, id, video, category }) {
       id={id}
       className="w-[300px] h-[260px] shadow-2xl rounded-md dark:bg-gray-800"
     >
-    <video id='vid' controls>
-      <source src={video} type="video/mp4" />
-      Your browser does not support the video tag.
-   </video>
+    <iframe className="w-[300px] h-[169px]" src={video} frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
    <div className="flex flex-col justify-between">
       <h6 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white w-[300px] truncate">
       <span>{name}</span>
