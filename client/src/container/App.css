@@ -2,3 +2,15 @@
   padding: 1rem;
   text-align: center;
 }
+
+@media(max-width: 767px) {
+  #searchTerm { 
+   width: 110px;
+  }
+ }
+ 
+@media(max-width: 767px) {
+   #category { 
+    width: 110px;
+}
+}
