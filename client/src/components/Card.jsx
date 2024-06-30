@@ -1,7 +1,17 @@
-export default function Cardd({ name, date, id, video, category }) {
+import { motion } from "framer-motion";
+import { fadeInVarients } from "./utils/motion"
+
+export default function Card({ name, date, id, video, category }) {
   return (
-    <div
+    <motion.div
       id={id}
+      variants={fadeInVarients}
+      initial="hidden"
+      animate="show"
+      custom={id}
+      viewport={{
+        once: true,
+      }}
       className="w-[300px] h-[260px] shadow-2xl rounded-md dark:bg-gray-800"
     >
     <iframe className="w-[300px] h-[169px]" src={video} frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
@@ -16,6 +26,6 @@ export default function Cardd({ name, date, id, video, category }) {
     <div className="pl-[12rem] pt-[10px]">
     <span className="bg-white text-gray-700 text-xs font-medium rounded px-2.5 py-0.5 dark:text-gray-800 border-2 dark:border-0 border-gray-600">{category}</span>
   </div>
-  </div>
+  </motion.div>
   )
 }
