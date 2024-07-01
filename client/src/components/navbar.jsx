@@ -12,7 +12,7 @@ export default function Navbarr({submit, change, sidebardata}) {
     initial="hidden"
     animate="show"
       >
-    <Navbar className="bg-[#C2C4D2] fixed top-3 w-[96%] shadow-md z-50" fluid rounded>
+    <Navbar className="bg-[#C2C4D2] fixed top-3 w-[96%] shadow-md z-50 gap-9" fluid rounded>
       <Navbar.Brand>
         <img src={d} className="mr-3 h-6 sm:h-9 rounded" alt="MT Logo" />
         <motion.span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white" variants={slideInBrandName}>{window.innerWidth <= 768 ? "MT" : "Movie Trailer"}</motion.span>
@@ -20,6 +20,7 @@ export default function Navbarr({submit, change, sidebardata}) {
 <motion.div variants={slideInForm} className='flex flex-row'>
 <form onSubmit={submit} className="flex flex-row space-x-2">
       <Select onChange={change} value={sidebardata} id='category' className='rounded-none' size="sm">
+      <option value='uncategorized'>uncategorized</option>
       <option value='action'>Action</option>
       <option value='adventure'>Adventure</option>
       <option value='animation'>Animation</option>
@@ -27,7 +28,6 @@ export default function Navbarr({submit, change, sidebardata}) {
       <option value='crime'>Crime</option>
       <option value='fantasy'>Fantasy</option>
       <option value='romance'>Romance</option>
-      <option value='uncategorized'>uncategorized</option>
     </Select>
     <TextInput type='text' placeholder='Search...' rightIcon={AiOutlineSearch} id='searchTerm' onChange={change} />
 </form>

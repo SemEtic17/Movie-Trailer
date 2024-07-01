@@ -2,7 +2,7 @@ import Card from './Card';
 
 export default function CardList(  {Data} ) {
   return (
-    <div className="flex flex-wrap gap-4 p-1 md:w-[1350px]">  
+    <div>  
     { 
       Data.map((user, i) =>{
         return (
