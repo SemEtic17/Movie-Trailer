@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { fadeInVarients } from "./utils/motion"
+import "./lite-yt-embed.css";
+import "./lite-yt-embed"
 
 export default function Card({ name, date, id, video, category }) {
+  console.log(video + "?vq=hd1080")
   return (
     <motion.div
       id={id}
@@ -14,7 +17,7 @@ export default function Card({ name, date, id, video, category }) {
       }}
       className="w-[300px] h-[260px] shadow-2xl rounded-md dark:bg-gray-800"
     >
-    <iframe className="w-[300px] h-[169px]" src={video} frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+    <lite-youtube videoid={video} params="constrols=1"></lite-youtube>
    <div className="flex flex-col justify-between">
       <h6 className="text-xl font-bold tracking-tight text-gray-900 dark:text-white w-[300px] truncate">
       <span>{name}</span>

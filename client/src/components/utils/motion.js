@@ -7,7 +7,6 @@ export const slideDownNav = {
     show: {
       y: 0,
       transition: {
-        delay: 2, 
         duration: 0.8, 
         type: "tween",
         when: "beforeChildren",
