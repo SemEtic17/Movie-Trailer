@@ -95,7 +95,7 @@ const handleShowMore = async () => {
     <br />
     <br />
     <br />
-    <div className="flex flex-wrap gap-4 p-1 md:w-[1350px] ml-[45px] md:ml-[0px] lg:ml-[0px] xl:ml-[0px]">
+    <div className="flex flex-wrap gap-4 p-1 md:w-[1350px] ml-[4%] md:ml-[0px] lg:ml-[0px] xl:ml-[0px]">
     { posts.map((post) => <Cardd key={post._id} name={post.name} date={post.date} video={post.video} id={post.id} category={post.category} />)}
     {showMore && (
             <button

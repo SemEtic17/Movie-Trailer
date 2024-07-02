@@ -4,7 +4,6 @@ import "./lite-yt-embed.css";
 import "./lite-yt-embed"
 
 export default function Card({ name, date, id, video, category }) {
-  console.log(video + "?vq=hd1080")
   return (
     <motion.div
       id={id}
