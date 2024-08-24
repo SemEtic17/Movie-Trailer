@@ -14,12 +14,12 @@ export default function CardList({ posts, showMore, handleShowMore }) {
         />
       ))}
       {showMore && (
-        <bautton
+        <button
           onClick={handleShowMore}
           className="text-teal-500 text-lg hover:underline p-7 w-full"
         >
           Show More
-        </bautton>
+        </button>
       )}
     </div>
   );

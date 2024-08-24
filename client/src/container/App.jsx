@@ -1,8 +1,7 @@
 import Navbar from "../components/navbar";
 import { useEffect, useState } from "react";
-// import { useLocation, useNavigate } from "react-router-dom";
-import Cardd from "../components/Card";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import About from "../components/about";
 import CardList from "../components/CardList";
@@ -15,8 +14,8 @@ export default function App() {
     category: "",
   });
   const [showMore, setShowMore] = useState(false);
-  // const location = useLocation();
-  // const navigate = useNavigate();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const urlParams = new URLSearchParams(location.search);
@@ -93,7 +92,7 @@ export default function App() {
   };
 
   return (
-    <BrowserRouter>
+    <div>
       <div className="overflow-x-hidden">
         <Navbar
           sidebardata={sidebarData.category}
@@ -118,6 +117,6 @@ export default function App() {
         </Routes>
       </div>
       <Foot />
-    </BrowserRouter>
+    </div>
   );
 }
