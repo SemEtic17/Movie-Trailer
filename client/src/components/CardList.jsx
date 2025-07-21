@@ -2,7 +2,7 @@ import Card from "./Card";
 
 export default function CardList({ posts, showMore, handleShowMore }) {
   return (
-    <div className="flex flex-wrap gap-4 p-1 md:w-[1350px] ml-[4%] md:ml-[0px] lg:ml-[0px] xl:ml-[0px]">
+    <div className="flex flex-wrap gap-4 p-1 justify-center">
       {posts.map((post) => (
         <Card
           key={post._id}

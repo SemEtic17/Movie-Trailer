@@ -93,15 +93,12 @@ export default function App() {
 
   return (
     <div>
-      <div className="overflow-x-hidden">
+      <div className="flex flex-col gap-[100px]">
         <Navbar
           sidebardata={sidebarData.category}
           submit={handleSubmit}
           change={handleChange}
         />
-        <br />
-        <br />
-        <br />
         <Routes>
           <Route
             path="/"
